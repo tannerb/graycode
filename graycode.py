@@ -14,5 +14,4 @@ def graycode(size: int):
     size += 1
     rows = [row(x, size - x) for x in range(1, size)]
 
-    for entry in zip(*rows[::-1]):
-        yield "".join(entry)
+    return ("".join(entry) for entry in zip(*rows[::-1]))
