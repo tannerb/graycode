@@ -1,3 +1,7 @@
+from functools import lru_cache
+
+
+@lru_cache(maxsize=128)
 def row(pos, bits=0):
     if bits <= 1:
         rpt = 2**pos // 2
